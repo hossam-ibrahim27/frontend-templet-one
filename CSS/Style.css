@@ -1,0 +1,802 @@
+/*
+ MY PRoject CSS File:
+1) General Styles.
+2)Commone Style.
+3)Sections: 
+ 3.1-Header.
+ 3.2-firstlook.
+ 3.3-welcome:use as common.
+ 3.4-menue.
+ 3.5-offer
+ 3.6-choose
+ 3.7-fouuricon
+ 3.8-pricing. 
+ 3.9-owners
+ 3.10-team
+ 3.11-news
+ 3.12-footer 
+*/
+/* ..............1)General Styles.....................................  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: text;
+}
+
+/* ..............2)Commone Styles.....................................  */
+a {
+    text-decoration: none;
+}
+
+.CommonBackground-continer {
+    background-color: #eee;
+    padding: 45px 0;
+    overflow: auto;
+}
+
+.common-overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hero-imag {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+ul li {
+    list-style-type: none;
+}
+
+/* .............. 3.1-Header...........................................  */
+.Header-Continer {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.507);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    overflow: auto;
+    font-size: 15px;
+}
+
+.Header-image img {
+    width: 100px;
+    height: 50px;
+    float: left;
+    margin-left: 150px;
+}
+
+.Header-link {
+    float: right;
+    margin-right: 200px;
+    position: relative;
+}
+
+.Header-link li {
+    display: inline-block;
+    margin-left: 30px;
+
+}
+
+.Header-link li a {
+    line-height: 50px;
+    color: #fdfffc;
+    position: relative;
+}
+
+.Header-link li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 4px;
+    top: 18px;
+    left: 0;
+    background-color: #c1292e;
+    opacity: 1;
+    border-radius: 1px;
+}
+
+.Header-link li a:hover::after {
+    width: 100%;
+    height: 5px;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+
+/* Header-link-active==> use id to be stronger than pseudoe class and make override */
+#Header-link-active::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    top: 18px;
+    left: 0;
+    background-color: #c1292e;
+    border-radius: 1px;
+}
+
+#Header-link-active::after {
+    opacity: 1;
+}
+
+.blog {
+    position: fixed;
+    padding: 0 25px;
+    background-color: #c1292e;
+    color: #fdfffc;
+    z-index: 10;
+    top: 50px;
+    left: 77%;
+    font-size: 17px;
+    display: none;
+}
+
+.blog-parent:hover .blog {
+    display: block;
+}
+
+/* ..............3.2-firstlook.....................................  */
+.firstlook-continer {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../Image/Background-firstLoock.jpg);
+    background-size: contain;
+    position: relative;
+}
+
+.firstlook-overlay {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.782);
+}
+
+.firstlook-parent {
+    width: 70%;
+    text-align: center;
+}
+
+.firstlook-parent h1 {
+    font-size: 50px;
+    color: #fdfffc;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    word-spacing: 2px;
+}
+
+.firstlook-parent p {
+    font-size: 17px;
+    color: #fdfffc;
+    padding-bottom: 10px;
+    text-transform: lowercase;
+    word-spacing: 2px;
+}
+
+.firstlook-parent button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 7px;
+    text-transform: capitalize;
+    border: none;
+    margin-left: 10px;
+}
+
+.firstlook-parent button:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.firstlook-parent-butn {
+    background-color: #c1292e;
+    color: #fdfffc;
+}
+
+/* ..............3.3-welcome:use as common.....................................  */
+.common-continer {
+    width: 80vw;
+    margin: 110px auto;
+}
+
+.common-head {
+    margin: auto;
+    text-align: center;
+    font-size: 24px;
+    text-transform: capitalize;
+}
+
+.common-head div {
+    background-color: #c1292e;
+    width: 5%;
+    height: 5px;
+    margin: 8px auto;
+    margin-bottom: 70px;
+}
+
+.common-parent {
+    overflow: auto;
+}
+
+.common-child {
+    float: left;
+    width: 30%;
+    padding: 30px 20px;
+    text-align: center;
+    border: 1px solid #c1292e69;
+    position: relative;
+}
+
+.common-child i {
+    color: #c1292e;
+    font-size: 30px;
+    padding-bottom: 15px;
+}
+
+.common-child h2 {
+    font-size: 25px;
+    padding-bottom: 15px;
+    text-transform: capitalize;
+}
+
+.common-child p {
+    padding-bottom: 15px;
+    text-transform: lowercase;
+    word-spacing: 2px;
+}
+
+.common-child a {
+    color: #c1292e;
+}
+
+.common-child-middle {
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.common-child::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: rgb(0, 0, 0);
+    opacity: 0;
+}
+
+.common-child:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+.common-child:hover i,
+.common-child:hover h2,
+.common-child:hover p,
+.common-child:hover a {
+    position: relative;
+    z-index: 5;
+    top: auto;
+    left: auto;
+}
+
+.common-child:hover i,
+.common-child:hover a {
+    color: #c1292e;
+}
+
+.common-child:hover h2 {
+    color: white;
+}
+
+.common-child:hover p {
+    color: #4479ab;
+}
+
+/* ..............3.4-menue.....................................  */
+.menueBackground-continer {
+    /*only overlay for CommonBackground-continer*/
+    margin-top: 280px;
+}
+
+.menue-imag {
+    float: left;
+    width: 30%;
+    height: 500px;
+    text-align: center;
+    position: relative;
+}
+
+.menue-imag img {
+    width: 100%;
+    height: 500px;
+    padding: 15px 15px;
+}
+
+.menue-ovelay {
+    padding-top: 150px;
+    visibility: hidden;
+}
+
+.menue-imag:hover .menue-ovelay {
+    visibility: visible;
+}
+
+.menue-ovelay h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: lighter;
+    padding-bottom: 10px;
+    color: #fdfffc;
+    visibility: hidden;
+}
+
+.menue-ovelay p {
+    font-size: 22px;
+    text-transform: lowercase;
+    padding-bottom: 10px;
+    color: #fdfffc;
+    visibility: hidden;
+}
+
+.menue-ovelay a i {
+    color: #c1292e;
+    background-color: #fdfffc;
+    width: 60px;
+    height: 60px;
+    font-size: 25px;
+    visibility: hidden;
+    line-height: 60px;
+}
+
+.menue-ovelay:hover h2,
+.menue-ovelay:hover p,
+.menue-ovelay:hover a i {
+    position: relative;
+    top: auto;
+    left: auto;
+    visibility: visible;
+}
+
+/* ..............3.5-offer.....................................  */
+.offer-continer {
+    padding-top: 25px;
+    margin-bottom: 35px;
+}
+
+.offer-child {
+    padding: 30px 15px;
+    text-align: start;
+    margin-bottom: 20px;
+}
+
+.offer-child h2 {
+    display: inline-block;
+    padding-left: 15px;
+}
+
+.offer-child p {
+    padding-left: 50px;
+    text-transform: capitalize;
+    word-spacing: 2px;
+}
+
+/* ..............3.6-choose.....................................  */
+.Choose-continer {
+    margin-bottom: 80px;
+}
+
+.choose-child {
+    float: left;
+    width: 40%;
+    text-transform: lowercase;
+    font-size: 17px;
+}
+
+.choose-head {
+    text-align: start;
+}
+
+.choose-head div {
+    width: 70px;
+    margin-left: 0;
+    margin-bottom: 45px;
+}
+
+.choose-child-imag img {
+    width: 500px;
+    height: 500px;
+    margin-left: 15%;
+}
+
+.choose-child-circle-parent {
+    overflow: auto;
+}
+
+.choose-child-circle-parent div {
+    float: left;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 10px 10px;
+    background: #7b7b7b;
+}
+
+/*to make css code we use selectors (css3,don't use) so use id > class*/
+#choose-child-circle {
+    background-color: #c1292e;
+    margin-left: 75%;
+}
+
+.choose-child-circle-parent div:hover {
+    background-color: #c1292e;
+}
+
+.choose-child ul li {
+    padding-top: 20px;
+}
+
+.choose-child ul li::before {
+    /*unicode of icon*/
+    content: "\f058";
+    font-family: "font awesome 5 free";
+    font-size: 18px;
+    color: #c1292e;
+    padding-right: 3px;
+}
+
+/* ..............3.7-fouricon.....................................  */
+.fouricon-background {
+    width: 100%;
+    height: 400px;
+    background-image: url(../Image/fouricon-background.jpg);
+    background-size: contain;
+    background-attachment: fixed;
+    overflow: auto;
+    position: relative;
+}
+
+.fouricon-continer {
+    width: 80%;
+}
+
+.fouricon-child {
+    float: left;
+    width: 21.25%;
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    color: #fdfffc;
+}
+
+.fouricon-child-third {
+    margin-right: 5%;
+}
+
+.fouricon-child i {
+    color: #c1292e;
+    font-size: 30px;
+    padding-bottom: 15px;
+}
+
+.fouricon-child h2 {
+    font-size: 30px;
+}
+
+.fouricon-child p {
+    padding-bottom: 15px;
+    text-transform: lowercase;
+}
+
+/* ..............3.8-pricing.....................................  */
+.pricing-bacground {
+    background-color: #d1cfcf8d;
+    padding: 20px 0;
+}
+
+.pricing-child {
+    float: left;
+    width: 30%;
+    padding: 30px 10px;
+    text-align: center;
+    border: 1px solid #c1292e70;
+    color: #2d2d2dca;
+    position: relative;
+}
+
+.pricing-child-title {
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.pricing-child-circle {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 2px solid #c1292e;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.pricing-child-circle h2 {
+    font-size: 50px;
+    padding-top: 10px;
+    color: black;
+    padding-bottom: 0px;
+    font-weight: bolder;
+}
+
+.pricing-child-circle p {
+    font-size: 20px;
+    color: black;
+    padding-top: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.pricing-child p {
+    margin-bottom: 10px;
+}
+
+.pricing-child-rectangle {
+    border: 1px solid #c1292e;
+    width: 35%;
+    height: 30px;
+    margin: auto;
+    margin-top: 25px;
+    line-height: 25px;
+}
+
+.pricing-child::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0;
+}
+
+.pricing-child:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    transition: 0.5s;
+}
+
+.pricing-child:hover .pricing-child-title,
+.pricing-child:hover .pricing-child-circle-title {
+    position: relative;
+    top: auto;
+    left: auto;
+    color: #2f99fb;
+}
+
+.pricing-child:hover .pricing-child-circle-title {
+    transition: 1s;
+}
+
+/* ..............3.9-owners.....................................  */
+.owners-background {
+    background-image: url(../Image/owners-background.jpg);
+}
+
+.owners-child {
+    float: left;
+    width: 50%;
+    text-align: center;
+    color: #fdfffc;
+    overflow: auto;
+}
+
+.owners-child-imag {
+    float: left;
+    margin-left: 20%;
+}
+
+.owners-child-imag img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.owners-child-title {
+    float: left;
+    margin: 15px 15px;
+}
+
+.owners-child-title p {
+    color: #c1292e;
+    padding-top: 5px;
+}
+
+.owners-child-prag {
+    margin-top: 100px;
+    font-size: 14px;
+    text-transform: capitalize;
+    text-align: start;
+    margin-left: 25%;
+}
+
+/* ..............3.10-team.....................................  */
+.team-parent {
+    padding: 15px 10%;
+}
+
+.team-child {
+    float: left;
+    width: 30%;
+    background-color: #c2c2c2;
+    padding: 20px 20px;
+    text-align: center;
+    border: none;
+}
+
+.team-child-img {
+    width: 90%;
+    height: 300px;
+    margin: 0 5%;
+    position: relative;
+}
+
+.team-child-img img {
+    width: 100%;
+    height: 300px;
+}
+
+.team-child-content h2 {
+    color: #000000;
+}
+
+.team-child-content p {
+    text-transform: uppercase;
+    color: #cc3a3f;
+}
+
+.team-overlay a {
+    width: 50px;
+    height: 50px;
+    color: #fdfffc;
+    background-color: #c1292e;
+    display: block;
+    margin-left: auto;
+    font-size: 20px;
+
+}
+
+.team-overlay a i {
+    line-height: 50px;
+}
+
+.team-overlay {
+    background-color: rgba(0, 0, 0, 0.400);
+    visibility: hidden;
+}
+
+.team-child:hover .team-overlay {
+    visibility: visible;
+}
+
+.team-child:hover .team-child-content h2 {
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.team-child:hover .team-child-content p {
+    color: #000000;
+}
+
+/* ..............3.11-news.....................................  */
+.news-continer {
+    margin-bottom: 0;
+}
+
+.news-parent {
+    overflow: auto;
+    background-color: #fce9e942;
+}
+
+.news-head {
+    background-color: #ffffff;
+}
+
+.news-child {
+    height: 630px;
+    padding: 0 20px;
+    border: none;
+    text-align: start;
+    background-color: #ffffff;
+}
+
+.news-child::after {
+    background-color: #4b8dca9b;
+}
+
+.news-child-img img {
+    width: 250px;
+    height: 250px;
+}
+
+.news-child-content-item ul {
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.news-child-content-item ul li {
+    display: inline-block;
+    padding: 20px 5px;
+}
+
+.news-child-content-item ul li i {
+    color: #c1292e;
+}
+
+.news-child-content-item p {
+    padding: 20px 0;
+}
+
+.news-child-content-item h2,
+.news-child-content-item a {
+    color: #c1292e;
+}
+
+.news-child-content-item a {
+    text-transform: capitalize;
+}
+
+/* ..............3.11-footter.....................................  */
+.footter-contener {
+    width: 100%;
+    background-color: #353b41f8;
+    text-align: center;
+    padding: 80px 0;
+    text-transform: uppercase;
+}
+
+.footter-imag img {
+    width: 250px;
+    height: 100px;
+}
+
+.footter-icon {
+    margin: 30px;
+}
+
+.footter-icon a {
+    background-color: #c1292e;
+    font-size: 20px;
+    border-radius: 50%;
+    padding: 10px 15px;
+    margin-left: 5px;
+}
+
+.footter-icon a i {
+    color: #eee;
+}
+
+.footter-icon a:hover {
+    background-color: #4b8dca;
+}
+
+.footer-copyright {
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.footer-copyright i {
+    color: #c1292e;
+}
